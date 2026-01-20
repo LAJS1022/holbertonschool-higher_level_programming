@@ -18,7 +18,7 @@ def roman_to_int(roman_string):
 
     for char in roman_string:
         value = roman_map.get(char, 0)
-        if value > prev_value
+        if value > prev_value:   # <-- colon was missing here
             total += value - 2 * prev_value
         else:
             total += value
