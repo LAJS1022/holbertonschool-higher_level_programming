@@ -3,8 +3,11 @@
 # Regular usage
 >>> say_my_name("John", "Smith")
 My name is John Smith
+
 >>> say_my_name("Walter", "White")
 My name is Walter White
+
+# Only first name
 >>> say_my_name("Bob")
 My name is Bob 
 
@@ -15,7 +18,13 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 # Invalid last_name
->>> say_my_name("John", 123)
+>>> say_my_name("Alice", 7)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
+
+# Missing required argument (no args)
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
