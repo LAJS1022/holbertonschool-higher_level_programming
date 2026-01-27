@@ -8,8 +8,19 @@ class Square:
     """Defines a square with private size, position, validation, area, and print method"""
 
     def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+        """
+        Initialize a new Square instance.
+
+        Args:
+            size (int): size of the square (default 0)
+            position (tuple): coordinates (default (0, 0))
+
+        Raises:
+            TypeError: if size is not an integer or position not valid
+            ValueError: if size < 0
+        """
+        self.size = size          # use setter for validation
+        self.position = position  # use setter for validation
 
     @property
     def size(self):
