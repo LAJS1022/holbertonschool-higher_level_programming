@@ -10,11 +10,12 @@ using the character '#', respecting its position offsets.
 
 class Square:
     """
-    This class defines a square by its size and position.
-    The size attribute is private to ensure type and value control.
-    The position attribute is private to ensure proper formatting
-    when printing the square. Getter and setter methods are provided
-    to safely retrieve and update these attributes.
+    Represents a square defined by its size and position.
+
+    The size attribute controls the dimensions of the square.
+    The position attribute controls the horizontal and vertical
+    offsets when printing the square. Both attributes are validated
+    to ensure they are integers and non-negative values.
     """
 
     def __init__(self, size=0, position=(0, 0)):
