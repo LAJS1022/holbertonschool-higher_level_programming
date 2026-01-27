@@ -35,26 +35,12 @@ class Square:
 
     @property
     def size(self):
-        """
-        Retrieve the size of the square.
-
-        Returns:
-            int: The current size of the square.
-        """
+        """Retrieve the size of the square."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """
-        Set the size of the square with validation.
-
-        Args:
-            value (int): The new size of the square.
-
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is less than 0.
-        """
+        """Set the size of the square with validation."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -63,25 +49,12 @@ class Square:
 
     @property
     def position(self):
-        """
-        Retrieve the position of the square.
-
-        Returns:
-            tuple: The current position offset of the square.
-        """
+        """Retrieve the position of the square."""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """
-        Set the position of the square with validation.
-
-        Args:
-            value (tuple): A tuple of 2 non-negative integers.
-
-        Raises:
-            TypeError: If value is not a tuple of 2 non-negative integers.
-        """
+        """Set the position of the square with validation."""
         if (not isinstance(value, tuple) or
             len(value) != 2 or
             not all(isinstance(num, int) for num in value) or
@@ -90,13 +63,8 @@ class Square:
         self.__position = value
 
     def area(self):
-        """
-        Compute the area of the square.
-
-        Returns:
-            int: The current square area.
-        """
-        return self.__size * self.__size
+        """Compute and return the area of the square."""
+        return self.size * self.size
 
     def my_print(self):
         """
@@ -107,12 +75,12 @@ class Square:
         - position[1] adds newlines before the square.
         If size is 0, print an empty line.
         """
-        if self.__size == 0:
+        if self.size == 0:
             print()
             return
 
-        for _ in range(self.__position[1]):
+        for _ in range(self.position[1]):
             print()
 
-        for _ in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
+        for _ in range(self.size):
+            print(" " * self.position[0] + "#" * self.size)
