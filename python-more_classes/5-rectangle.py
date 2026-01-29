@@ -22,6 +22,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """Set the width of the rectangle with validation."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -35,6 +36,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """Set the height of the rectangle with validation."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -55,4 +57,24 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """Return the rectangle
+        """Return the rectangle with the # character.
+
+        If width or height is 0, return an empty string.
+        """
+        if self.width == 0 or self.height == 0:
+            return ""
+
+        rect_lines = []
+        for _ in range(self.height):
+            rect_lines.append("#" * self.width)
+        return "\n".join(rect_lines)
+
+    def __repr__(self):
+        """Return a string representation of the rectangle
+        that can be used with eval() to recreate it.
+        """
+        return f"Rectangle({self.width}, {self.height})"
+
+    def __del__(self):
+        """Print a message when a Rectangle is deleted."""
+        print("Bye rectangle...")
