@@ -24,7 +24,7 @@ class Student:
 
         Args:
             attrs (list, optional): List of attribute names to retrieve.
-                                    If None, all attributes are returned.
+            If None, all attributes are returned.
 
         Returns:
             dict: Dictionary representation of the student.
