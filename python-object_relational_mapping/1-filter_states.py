@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists states starting with N from hbtn_0e_0_usa
+Lists states starting with N from hbtn_0e_0_usa a
 """
 
 import MySQLdb
