@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 """
-0. Get all states
-Script that lists all states from the database hbtn_0e_0_usa
-Arguments: mysql username, mysql password, database name
-Connects to a MySQL server running on localhost at port 3306
-Results are sorted in ascending order by states.id
+Lists all states from the database hbtn_0e_0_usa,
+sorted by states.id in ascending order.
 """
 
 import MySQLdb
