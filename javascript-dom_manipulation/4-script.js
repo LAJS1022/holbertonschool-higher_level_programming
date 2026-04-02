@@ -1,10 +1,3 @@
-document.querySelector('#toggle_header').addEventListener('click', function () {
-  const header = document.querySelector('header');
-  if (header.classList.contains('red')) {
-    header.classList.remove('red');
-    header.classList.add('green');
-  } else {
-    header.classList.remove('green');
-    header.classList.add('red');
-  }
+document.querySelector('#add_item').addEventListener('click', function () {
+  document.querySelector('.my_list').appendChild(document.createElement('li')).textContent = 'Item';
 });
