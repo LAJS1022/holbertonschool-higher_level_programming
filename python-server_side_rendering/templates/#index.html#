@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Home - My Flask App</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <h1>Welcome to My Flask App</h1>
+    <p>This app demonstrates dynamic data rendering with Flask and Jinja.</p>
+
+    <h2>Explore Products</h2>
+    <p>You can view product data from different sources:</p>
+    <ul>
+        <li><a href="/products?source=json">View Products from JSON</a></li>
+        <li><a href="/products?source=csv">View Products from CSV</a></li>
+        <li><a href="/products?source=sql">View Products from SQLite</a></li>
+    </ul>
+
+    {% include 'footer.html' %}
+</body>
+</html>
